@@ -5,10 +5,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, vendor/vertex/config/common_full_phone.mk)
 
-$(call inherit-product, device/samsung/gtexswifi/device_gtexswifi.mk)
+$(call inherit-product, device/samsung/gtexswifi/device.mk)
 
 # Call the proprietary setup
-$(call inherit-product, vendor/samsung/gtexswifi-vendor.mk)
+$(call inherit-product, vendor/samsung/gtexswifi/gtexswifi-vendor.mk)
 
 # Use specific resolution for bootanimation
 TARGET_BOOTANIMATION_SIZE := 720x480
