@@ -1,12 +1,12 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/gtexslte/BoardConfigVendor.mk
+-include vendor/samsung/gtexswifi/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_RADIOIMAGE := true
-TARGET_BOARD_PLATFORM := sc8830
+TARGET_BOARD_PLATFORM := sc7730
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -15,7 +15,7 @@ TARGET_CPU_SMP := true
 BOARD_VENDOR := samsung
 
 ARCH_ARM_HAVE_TLS_REGISTER := true
-TARGET_BOOTLOADER_BOARD_NAME := 8830
+TARGET_BOOTLOADER_BOARD_NAME := 7730SW
 
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
 BOARD_KERNEL_BASE := 0x80000000
@@ -50,8 +50,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-TARGET_BOARD_INFO_FILE := device/samsung/gtexslte/board-info.txt
-BOARD_EGL_CFG := device/samsung/gtexslte/egl.cfg
+TARGET_BOARD_INFO_FILE := device/samsung/gtexswifi/board-info.txt
+BOARD_EGL_CFG := device/samsung/gtexswifi/egl.cfg
 
 # Graphics
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -71,15 +71,14 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 # COMMON_GLOBAL_CFLAGS += -DSC8830_HWC
 # COMMON_GLOBAL_CFLAGS += -DBOARD_CANT_REALLOCATE_OMX_BUFFERS
 
-BOARD_RIL_CLASS := ../../../device/samsung/gtexslte/ril
 BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # Bluetooth
 USE_BLUETOOTH_BCM4343 := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_SPRD := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gtexslte/bluetooth
-BOARD_CUSTOM_BT_CONFIG := device/samsung/gtexslte/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gtexswifi/bluetooth
+BOARD_CUSTOM_BT_CONFIG := device/samsung/gtexswifi/bluetooth/libbt_vndcfg.txt
 SPRD_WCNBT_CHISET := marlin
 BOARD_SPRD_WCNBT_MARLIN := true
 
@@ -97,20 +96,23 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
 WIFI_BAND := 802_11_ABG
 
-TARGET_PREBUILT_KERNEL := kernel/samsung/gtexslte/arch/arm/boot/zImage
-
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 
 # Integrated kernel building configs
 
-TARGET_KERNEL_SOURCE := kernel/samsung/gtexslte
-TARGET_KERNEL_CONFIG := gtexslte_defconfig
-TARGET_VARIANT_CONFIG := gtexslte_defconfig
-TARGET_SELINUX_CONFIG := gtexslte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/gtexswifi
+TARGET_KERNEL_CONFIG := lineageos_gtexswifi_defconfig
+TARGET_VARIANT_CONFIG := lineageos_gtexswifi_defconfig
+TARGET_SELINUX_CONFIG := lineageos_gtexswifi_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 KERNEL_TOOLCHAIN := /home/jedld/linaro/toolchain/bin
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/boot/mkbootimg.mk
+TARGET_PREBUILT_DTB := $(LOCAL_PATH)/boot/dt.img
+TARGET_DHTB_PAD := $(LOCAL_PATH)/boot/dhtb.pad
+
 #
 # SC9830_MODULES:
 # 	mkdir -p $(PRODUCT_OUT)/root/lib/modules
@@ -129,7 +131,7 @@ KERNEL_TOOLCHAIN := /home/jedld/linaro/toolchain/bin
 # Enable WEBGL in WebKit
 ENABLE_WEBGL := true
 
-BOARD_SEPOLICY_DIRS += device/samsung/gtexslte/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/gtexswifi/sepolicy
 
 # Camera
 #zsl capture
@@ -227,7 +229,7 @@ TARGET_BOARD_CAMERA_HDR_CAPTURE := true
 # misc
 TARGET_HAS_BACKLIT_KEYS := false
 
-TARGET_RECOVERY_FSTAB = device/samsung/gtexslte/recovery.fstab
+TARGET_RECOVERY_FSTAB = device/samsung/gtexswifi/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_MISC_PARTITION := true
