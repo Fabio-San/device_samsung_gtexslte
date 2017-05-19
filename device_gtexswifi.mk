@@ -3,7 +3,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/gtexswifi/gtexswifi-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/gtexswifi-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/gtexswifi/overlay
 
@@ -218,5 +218,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik Heap config
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
-PRODUCT_NAME := full_gtexswifi
+PRODUCT_NAME := vertex_gtexswifi
 PRODUCT_DEVICE := gtexswifi
