@@ -3,16 +3,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/gtexslte/gtexslte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/gtexswifi/gtexswifi-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/gtexslte/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/gtexswifi/overlay
 
 # This device is hdpi
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/samsung/gtexslte/kernel
+	LOCAL_KERNEL := device/samsung/gtexswifi/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -30,34 +30,33 @@ PRODUCT_COPY_FILES += \
 
 # System init .rc files
 SYSTEM_INIT_RC_FILES := \
-		device/samsung/gtexslte/system/etc/init/at_distributor.rc \
-		device/samsung/gtexslte/system/etc/init/engpc.rc \
-		device/samsung/gtexslte/system/etc/init/mediacodec.rc \
-		device/samsung/gtexslte/system/etc/init/mediaserver.rc \
-		device/samsung/gtexslte/system/etc/init/rild.rc \
-		device/samsung/gtexslte/system/etc/init/surfaceflinger.rc \
+		device/samsung/gtexswifi/system/etc/init/at_distributor.rc \
+		device/samsung/gtexswifi/system/etc/init/engpc.rc \
+		device/samsung/gtexswifi/system/etc/init/mediacodec.rc \
+		device/samsung/gtexswifi/system/etc/init/mediaserver.rc \
+		device/samsung/gtexswifi/system/etc/init/surfaceflinger.rc \
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(SYSTEM_INIT_RC_FILES),$(f):system/etc/init/$(notdir $(f)))
 
 PRODUCT_COPY_FILES += \
-		device/samsung/gtexslte/init.board.rc:root/init.board.rc \
-		device/samsung/gtexslte/init.sc8830.rc:root/init.sc8830.rc \
-		device/samsung/gtexslte/init.sc8830.usb.rc:root/init.sc8830.usb.rc \
-		device/samsung/gtexslte/init.gtexslte.rc:root/init.gtexslte.rc \
-		device/samsung/gtexslte/init.gtexslte_base.rc:root/init.gtexslte_base.rc \
-    device/samsung/gtexslte/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
-    device/samsung/gtexslte/init.gtexslte.usb.rc:root/init.gtexslte.usb.rc \
-    device/samsung/gtexslte/fstab.sc8830:root/fstab.sc8830 \
-		device/samsung/gtexslte/fstab.sc8830:root/fstab.unknown \
-    device/samsung/gtexslte/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
-		device/samsung/gtexslte/ueventd.sc8830.rc:root/ueventd.unknown.rc \
-		device/samsung/gtexslte/init.rilcommon.rc:root/init.rilcommon.rc \
-		device/samsung/gtexslte/init.wifi.rc:root/init.wifi.rc \
-		device/samsung/gtexslte/init.dhcp.rc:root/init.dhcp.rc \
-		device/samsung/gtexslte/apns-conf.xml:system/etc/apns-conf.xml \
-		device/samsung/gtexslte/bluetooth:system/etc/bluetooth \
-		device/samsung/gtexslte/init.rc:root/init.rc \
+		device/samsung/gtexswifi/init.board.rc:root/init.board.rc \
+		device/samsung/gtexswifi/init.sc8830.rc:root/init.sc8830.rc \
+		device/samsung/gtexswifi/init.sc8830.usb.rc:root/init.sc8830.usb.rc \
+		device/samsung/gtexswifi/init.gtexswifi.rc:root/init.gtexswifi.rc \
+		device/samsung/gtexswifi/init.gtexswifi_base.rc:root/init.gtexswifi_base.rc \
+    device/samsung/gtexswifi/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
+    device/samsung/gtexswifi/init.gtexswifi.usb.rc:root/init.gtexswifi.usb.rc \
+    device/samsung/gtexswifi/fstab.sc8830:root/fstab.sc8830 \
+		device/samsung/gtexswifi/fstab.sc8830:root/fstab.unknown \
+    device/samsung/gtexswifi/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
+		device/samsung/gtexswifi/ueventd.sc8830.rc:root/ueventd.unknown.rc \
+		device/samsung/gtexswifi/init.rilcommon.rc:root/init.rilcommon.rc \
+		device/samsung/gtexswifi/init.wifi.rc:root/init.wifi.rc \
+		device/samsung/gtexswifi/init.dhcp.rc:root/init.dhcp.rc \
+		device/samsung/gtexswifi/apns-conf.xml:system/etc/apns-conf.xml \
+		device/samsung/gtexswifi/bluetooth:system/etc/bluetooth \
+		device/samsung/gtexswifi/init.rc:root/init.rc \
 
 $(call inherit-product, build/target/product/full.mk)
 
@@ -67,10 +66,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
 	$(LOCAL_PATH)/keylayout/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl
-
-#Wallpaper/Apps
-PRODUCT_PACKAGES += \
-	CMWallpapers
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -223,5 +218,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik Heap config
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
-PRODUCT_NAME := full_gtexslte
-PRODUCT_DEVICE := gtexslte
+PRODUCT_NAME := full_gtexswifi
+PRODUCT_DEVICE := gtexswifi
