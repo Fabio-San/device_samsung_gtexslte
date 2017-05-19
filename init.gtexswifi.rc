@@ -1,4 +1,4 @@
-import /init.gtexslte_base.rc
+import /init.gtexswifi_base.rc
 
 # Bluetooth dhcpcd config
 service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
