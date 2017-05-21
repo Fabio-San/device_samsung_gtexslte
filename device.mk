@@ -89,7 +89,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 		ro.sf.hwrotation=180 \
 		ro.opengles.version=131072 \
 		ro.product.hardware=SS_SHARKLS \
-		ro.product.modem.mode=GSM,EDGE,TD-SCDMA,WCDMA,TD-LTE,FDD-LTE \
 		ro.product.partitionpath=/dev/block/platform/sdio_emmc/by-name/ \
 		ro.adb.secure=0 \
 		ro.secure=0 \
@@ -218,5 +217,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik Heap config
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
-PRODUCT_NAME := vertex_gtexswifi
+PRODUCT_NAME := lineage_gtexswifi
 PRODUCT_DEVICE := gtexswifi

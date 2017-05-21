@@ -3,7 +3,7 @@ PRODUCT_RELEASE_NAME := gtexswifi
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, vendor/vertex/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 $(call inherit-product, device/samsung/gtexswifi/device.mk)
 
@@ -14,7 +14,7 @@ $(call inherit-product, vendor/samsung/gtexswifi/gtexswifi-vendor.mk)
 TARGET_BOOTANIMATION_SIZE := 720x480
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := vertex_gtexswifi
+PRODUCT_NAME := lineage_gtexswifi
 PRODUCT_DEVICE := gtexswifi
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T280
