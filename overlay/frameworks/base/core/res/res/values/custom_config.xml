@@ -28,13 +28,13 @@
              8 - Assistant (search)
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
+         config to 7. 
     <integer name="config_deviceHardwareKeys">1</integer>
 
-    <integer name="config_backKillTimeout">1500</integer>
+    <integer name="config_backKillTimeout">1500</integer> -->
 
-    <!-- Boolean to enable stk functionality on Samsung phones -->
-    <bool name="config_samsung_stk">true</bool>
+    <!-- Boolean to enable stk functionality on Samsung phones 
+    <bool name="config_samsung_stk">true</bool> -->
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">false</bool>
@@ -45,8 +45,8 @@
             2 - Launch assist intent
          This needs to match the constants in
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
-    -->
-    <integer name="config_longPressOnMenuBehavior">0</integer>
+   
+    <integer name="config_longPressOnMenuBehavior">0</integer> -->
 
     <!-- Older rotation sensors are not setting event.timestamp correctly. Setting to
          true will use SystemClock.elapsedRealtimeNanos() to set timestamp. -->

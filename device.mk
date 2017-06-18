@@ -48,8 +48,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/gtexswifi/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
     device/samsung/gtexswifi/init.gtexswifi.usb.rc:root/init.gtexswifi.usb.rc \
     device/samsung/gtexswifi/fstab.sc8830:root/fstab.sc8830 \
-		device/samsung/gtexswifi/fstab.sc8830:root/fstab.unknown \
-    device/samsung/gtexswifi/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
+        device/samsung/gtexswifi/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
 		device/samsung/gtexswifi/ueventd.sc8830.rc:root/ueventd.unknown.rc \
 		device/samsung/gtexswifi/init.rilcommon.rc:root/init.rilcommon.rc \
 		device/samsung/gtexswifi/init.wifi.rc:root/init.wifi.rc \
@@ -217,5 +216,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik Heap config
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
-PRODUCT_NAME := lineage_gtexswifi
+PRODUCT_NAME := deso_gtexswifi
 PRODUCT_DEVICE := gtexswifi

@@ -17,9 +17,15 @@ BOARD_VENDOR := samsung
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_BOOTLOADER_BOARD_NAME := 7730SW
 
-BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
+# Kernel
+BOARD_KERNEL_CMDLINE += console=ttyS1,115200n8
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_TAGS_OFFSET := 0x02000000
+TARGET_KERNEL_APPEND_DTB := true
+TARGET_KERNEL_ARCH := arm
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 
 #rild
 BOARD_PROVIDES_RILD := true
@@ -103,10 +109,9 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 # Integrated kernel building configs
 
 TARGET_KERNEL_SOURCE := kernel/samsung/gtexswifi
-TARGET_KERNEL_CONFIG := lineageos_gtexswifi_defconfig
-TARGET_VARIANT_CONFIG := lineageos_gtexswifi_defconfig
-TARGET_SELINUX_CONFIG := lineageos_gtexswifi_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
+TARGET_KERNEL_CONFIG := gtexswifi-dt_defconfig
+TARGET_VARIANT_CONFIG := gtexswifi-dt_defconfig
+TARGET_SELINUX_CONFIG := gtexswifi-dt_defconfig
 TARGET_PREBUILT_DTB := $(LOCAL_PATH)/boot/dt.img
 TARGET_DHTB_PAD := $(LOCAL_PATH)/boot/dhtb.pad
 
@@ -127,7 +132,6 @@ TARGET_DHTB_PAD := $(LOCAL_PATH)/boot/dhtb.pad
 
 # Enable WEBGL in WebKit
 ENABLE_WEBGL := true
-
 BOARD_SEPOLICY_DIRS += device/samsung/gtexswifi/sepolicy
 
 # Camera
@@ -225,8 +229,7 @@ TARGET_BOARD_CAMERA_HDR_CAPTURE := true
 
 # misc
 TARGET_HAS_BACKLIT_KEYS := false
-
-TARGET_RECOVERY_FSTAB = device/samsung/gtexswifi/recovery.fstab
+TARGET_RECOVERY_FSTAB = device/samsung/gtexswifi/fstab.sc8830
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_MISC_PARTITION := true
