@@ -45,9 +45,9 @@ PRODUCT_COPY_FILES += \
 		device/samsung/gtexswifi/init.sc8830.usb.rc:root/init.sc8830.usb.rc \
 		device/samsung/gtexswifi/init.gtexswifi.rc:root/init.gtexswifi.rc \
 		device/samsung/gtexswifi/init.gtexswifi_base.rc:root/init.gtexswifi_base.rc \
-    device/samsung/gtexswifi/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
-    device/samsung/gtexswifi/init.gtexswifi.usb.rc:root/init.gtexswifi.usb.rc \
-    device/samsung/gtexswifi/fstab.sc8830:root/fstab.sc8830 \
+        device/samsung/gtexswifi/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
+        device/samsung/gtexswifi/init.gtexswifi.usb.rc:root/init.gtexswifi.usb.rc \
+        device/samsung/gtexswifi/fstab.sc8830:root/fstab.sc8830 \
         device/samsung/gtexswifi/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
 		device/samsung/gtexswifi/ueventd.sc8830.rc:root/ueventd.unknown.rc \
 		device/samsung/gtexswifi/init.rilcommon.rc:root/init.rilcommon.rc \

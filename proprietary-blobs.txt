@@ -442,10 +442,10 @@
 /system/lib/hw/audio.r_submix.default.so
 /system/lib/hw/audio.usb.default.so
 /system/lib/hw/bluetooth.default.so
-#/system/lib/hw/camera.goldfish.jpeg.so
+/system/lib/hw/camera.goldfish.jpeg.so
 /system/lib/hw/camera.sc8830.so
 /system/lib/hw/gps.default.so
-#/system/lib/hw/gps.goldfish.so
+/system/lib/hw/gps.goldfish.so
 /system/lib/hw/gralloc.sc8830.so
 /system/lib/hw/hwcomposer.sc8830.so
 /system/lib/hw/lights.sc8830.so
