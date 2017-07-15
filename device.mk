@@ -178,8 +178,8 @@ PRODUCT_PACKAGES += \
 	wcnd_cli \
 	libril_shim \
 
-PRODUCT_PACKAGES += \
-	degas-mkbootimg
+#PRODUCT_PACKAGES += \
+	#degas-mkbootimg
 
 # Permissions
 PERMISSION_XML_FILES := \
@@ -216,5 +216,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik Heap config
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
-PRODUCT_NAME := deso_gtexswifi
+PRODUCT_NAME := lineage_gtexswifi
 PRODUCT_DEVICE := gtexswifi

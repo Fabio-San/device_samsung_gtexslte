@@ -236,7 +236,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 
 # Build system
-USE_NINJA := false
+#USE_NINJA := false
 
 # Use dmalloc() for such low memory devices like us
 MALLOC_SVELTE := true

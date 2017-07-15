@@ -1,0 +1,27 @@
+[
+  {
+    "repository": "Fabio-San/gtexswifi",
+    "target_path": "kernel/samsung/gtexswifi",
+    "branch": "los12"
+  },
+  {
+	"repository": "Fabio-San/android_vendor_sprd",
+    "target_path": "vendor/sprd",
+    "branch": "n"
+  },
+  {
+	"repository": "Fabio-San/vendor_samsung/gtexswifi",
+    "target_path": "vendor/samsung/gtexswifi",
+    "branch": "cm-13"
+  },
+  {
+	"repository": "Fabio-San/hardware_sprd",
+    "target_path": "hardware/sprd",
+    "branch": "performance_2"
+  },
+  {
+	"repository": "Fabio-San/hardware_sprd",
+    "target_path": "hardware/sprd",
+    "branch": "performance_2"
+  }
+]
